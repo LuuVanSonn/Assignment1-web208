@@ -8,5 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ProductServiceComponent {
   constructor(private http: HttpClient) { }
-
+  getProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(`http://localhost:3000/products`)
+  }
+  getProductById(id: number): Observable<IProduct> {
+    return this.http.get<IProduct>(`http://localhost:3000/products/${id}`)
+  }
 }
