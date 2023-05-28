@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServicesComponent } from './services/services.component';
-import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { AdminComponent } from './pages/admin/admin.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
@@ -18,17 +18,17 @@ import { AdminProductComponent } from './pages/admin/admin-product/admin-product
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
+import { ProductServiceComponent } from './services/product.service/product.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServicesComponent,
-    HomeComponent,
+    HomePageComponent,
     ProductListComponent,
     AdminLayoutComponent,
     BaseLayoutComponent,
     AboutPageComponent,
-    AdminComponent,
     HomePageComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
@@ -36,11 +36,16 @@ import { ProductEditComponent } from './pages/admin/product-edit/product-edit.co
     AdminProductComponent,
     DashboardComponent,
     ProductAddComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductServiceComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
