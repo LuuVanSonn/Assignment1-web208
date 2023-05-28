@@ -15,4 +15,14 @@ export class ProductListComponent {
       this.products = data;
     }, error => console.log(error.message))
   }
+  removeItem(id: any) {
+    // xoa API
+    this.productService.deleteProduct(id).subscribe(() => {
+      // reRender
+      this.products = this.products.filter(item => item.id !== id)
+    })
+    // this.onRemove.emit(id);
+  }
+
 }
+
