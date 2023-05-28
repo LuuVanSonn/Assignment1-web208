@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgMode
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServicesComponent } from './services/services.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
@@ -23,7 +22,6 @@ import { ProductServiceComponent } from './services/product.service/product.serv
 @NgModule({
   declarations: [
     AppComponent,
-    ServicesComponent,
     HomePageComponent,
     ProductListComponent,
     AdminLayoutComponent,
